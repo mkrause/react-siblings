@@ -1,6 +1,6 @@
 {
     "name": "react-siblings",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "React utility component for an array of elements (React v16+)",
     "author": "mkrause",
     "license": "MIT",
