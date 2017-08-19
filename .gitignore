@@ -1,0 +1,7 @@
+# Tool support
+/node_modules/
+
+# Project
+/lib-cjs/
+/lib-es/
+/dist/

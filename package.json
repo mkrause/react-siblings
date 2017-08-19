@@ -1,0 +1,36 @@
+{
+    "name": "react-siblings",
+    "version": "1.0.0",
+    "description": "React utility component for an array of elements (React v16+)",
+    "author": "mkrause",
+    "license": "MIT",
+    "repository": "https://github.com/mkrause/react-siblings",
+    "es2015": "src/Siblings.js",
+    "main": "lib-cjs/Siblings.js",
+    "module": "lib-es/Siblings.js",
+    "browser": "lib-es/Siblings.js",
+    "files": [
+        "src/",
+        "lib-cjs/",
+        "lib-es/"
+    ],
+    "scripts": {
+        "build:cjs": "NODE_ENV=production BABEL_ENV=cjs babel src --out-dir lib-cjs --source-maps inline",
+        "build:es": "NODE_ENV=production BABEL_ENV=es babel src --out-dir lib-es --source-maps inline",
+        "build:bundle": "NODE_ENV=production webpack -p",
+        "test": "NODE_ENV=development BABEL_ENV=cjs mocha --compilers js:babel-core/register --recursive tests",
+        "prepublishOnly": "npm run build:cjs && npm run build:es"
+    },
+    "devDependencies": {
+        "babel-core": "^6.16.0",
+        "babel-cli": "^6.24.1",
+        "babel-preset-es2015": "^6.16.0",
+        "mocha": "^3.5.0"
+    },
+    "dependencies": {
+        "react": "^16.0.0-beta"
+    },
+    "peerDependencies": {
+        "react": "^16.0.0-beta"
+    }
+}
